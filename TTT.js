@@ -20,9 +20,6 @@ const winPatterns = [
 
 let checkWinner = () => {
      winPatterns.forEach((pattern) => {
-          // console.log(pattern[0],pattern[1],pattern[2]);//[2,5,8]
-
-          // console.log(boxes[pattern[0]].innerText, boxes[pattern[1]].innerText, boxes[pattern[2]].innerText);
           let pos1Val = boxes[pattern[0]].innerText;
           let pos2Val = boxes[pattern[1]].innerText;
           let pos3Val = boxes[pattern[2]].innerText;
@@ -36,10 +33,9 @@ let checkWinner = () => {
 };
 
 function showWinner(winner) {
-     // console.log(winner);
+     msg.innerText = `Congratulation ! Player ${winner} Won.`;
      container.style.display = "none";
      winContainer.style.display = "flex";
-     msg.innerText = `Congratulation ! Player ${winner} won`
 }
 
 boxes.forEach((box) => {
@@ -52,11 +48,10 @@ boxes.forEach((box) => {
                turnX = true;
           }
           box.disabled = true;
+
           checkWinner();
      });
 });
-
-// console.log(boxes);
 
 resetBtn.addEventListener("click", reset);
 newGame.addEventListener("click", () => {
@@ -72,6 +67,3 @@ function reset() {
      });
      turnX = true;
 }
-
-//added new line
-
