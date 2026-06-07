@@ -8,6 +8,7 @@ let newGame = document.querySelector(".new-game");
 let turnX = true;
 
 const winPatterns = [
+     [0, 1, 2],
      [2, 4, 6],
      [0, 4, 8],
      [0, 3, 6],
@@ -15,7 +16,6 @@ const winPatterns = [
      [6, 7, 8],
      [1, 4, 7],
      [2, 5, 8],
-     [0, 1, 2],
 ];
 
 let checkWinner = () => {
